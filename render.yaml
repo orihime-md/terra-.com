@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: terra-test-bot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python terra.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
